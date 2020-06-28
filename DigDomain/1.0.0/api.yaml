@@ -1,0 +1,23 @@
+app_version: 1.0.0
+name: Dig Domain
+description: Returns list of ip addresses from a list of domain names
+contact_info:
+  name: "Dig Domain"
+  url: https://shuffler.io
+  email: jfoley@bioniccyber.com
+actions:
+  - name: dig_domains
+    description: Takes a string of domain names and returns their ip address
+    parameters:
+      - name: domains
+        description: A string of domain names
+        required: true
+        multiline: true
+        example: google.com
+        schema:
+          type: string
+    returns:
+      schema:
+        type: string
+
+large_image: data:image/png;base64,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
